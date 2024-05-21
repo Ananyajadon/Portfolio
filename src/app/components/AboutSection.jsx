@@ -2,13 +2,6 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import CIcon from '@coreui/icons-react';
-import * as icon from '@coreui/icons';
-import { RiNextjsFill,RiReactjsFill,RiHtml5Fill,RiCss3Fill,
-  RiTailwindCssLine,RiJavascriptFill,RiNodejsLine
- } from "react-icons/ri";
-import { SiMongodb,SiExpress,SiPostman,SiPython,SiKalilinux,SiWindowsxp} 
-from "react-icons/si";
 
 
 
@@ -18,54 +11,29 @@ const TAB_DATA = [
   id: "skills",
   content: (
     <div>
-      <div className="flex flex-wrap">
-        <div className="w-25">
-          <RiHtml5Fill size={110}/>
-        </div>
-        <div className="w-25">
-          <RiCss3Fill size={110}/>
-        </div>
-        <div className="w-25">
-          <RiJavascriptFill size={110}/>
-        </div>
-        <div className="w-25">
-          <RiTailwindCssLine size={110}/>
-        </div>
-      </div>
-      <div className="flex flex-wrap">
-        <div className="w-25">
-          <RiNextjsFill size={110} />
-        </div>
-        <div className="w-25">
-          <SiMongodb size={110}/>
-        </div>
-        <div className="w-25">
-          <RiReactjsFill size={110} />
-        </div>
-        <div className="w-25">
-          <SiPostman size={100} />
-        </div>
-      </div>
-      <div className="flex flex-wrap">
-        <div className="w-25">
-          <SiPython size={90} />
-        </div>
-        <div className="w-25">
-          <RiNodejsLine size={110}/>
-        </div>
-        <div className="w-25">
-          <SiExpress size={90} />
-        </div>
-        <div className="w-25">
-          <SiKalilinux size={110} />
-        </div>
-      </div>
-      <div className="flex flex-wrap">
-        <div className="w-25">
-          <SiWindowsxp size={110} />
-        </div>
-        {/* Add more icons here if needed */}
-      </div>
+   <p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind,materialui,js,ts," />
+  </a>
+</p>
+
+<br/>
+
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cpp,c,nodejs,py,express,mongodb,mysql,azure" />
+  </a>
+</p>
+
+<br/>
+
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,docker,figma,vscode,postman,linux,aws" />
+  </a>
+</p>
+
+
     </div>
   ),
 },
@@ -86,8 +54,10 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Introduction to linus</li>
-        <li>Google Professional Cloud Developer</li>
+       <li><a href="https://www.udemy.com/certificate/UC-7b6eed7d-9f42-422c-ad7e-0f9e8780af36/">Introduction to Linux</a></li>
+        <li><a href="https://www.udemy.com/certificate/UC-f05612df-8f7b-4e81-a4bb-78e3dce0da4c/">prompt engineering</a></li>
+        <li><a href="https://www.udemy.com/certificate/UC-fee8c1d0-7a85-4b01-a4de-1a18a1d95f78/">Introduction to C++</a></li>
+        <li><a href="https://www.udemy.com/certificate/UC-87d79f41-4a0b-423a-a951-c42539743c16/">Git: Basic to Advance</a></li>
       </ul>
     ),
   },
@@ -112,12 +82,12 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
+            working with JavaScript, React, Nextjs, Node.js, Express, Mysql,
             Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-10">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
